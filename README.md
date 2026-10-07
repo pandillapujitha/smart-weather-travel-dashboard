@@ -6,7 +6,7 @@ The project is deployed using GitHub Pages and is available here:
 
 👉 [**Smart Weather & Travel Dashboard – Live Demo**](https://pandillapujitha.github.io/smart-weather-travel-dashboard/)
 
-** A responsive weather dashboard that shows live conditions, a 5-day forecast and weather-based travel suggestions for any city. Built with plain HTML, CSS and Vanilla JavaScript. No backend, no build step.
+ A responsive weather dashboard that shows live conditions, a 5-day forecast and weather-based travel suggestions for any city. Built with plain HTML, CSS and Vanilla JavaScript. No backend, no build step.
 
 ## Features
 

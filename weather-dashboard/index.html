@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Smart Weather & Travel Dashboard: live weather, 5-day forecast and travel suggestions for any city.">
+  <title>Smart Weather & Travel Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-sky="clear">
+  <div class="wrap">
+    <header class="top">
+      <h1 class="brand">Skyline<span>Weather &amp; travel planner</span></h1>
+      <form id="searchForm" class="search" role="search" autocomplete="off">
+        <label for="cityInput" class="sr">City name</label>
+        <input id="cityInput" type="search" placeholder="Search a city, e.g. Lisbon" required>
+        <button type="submit" class="btn primary">Search</button>
+        <button type="button" id="locateBtn" class="btn" title="Use my location" aria-label="Use my location">Near me</button>
+      </form>
+      <div class="unit" role="group" aria-label="Temperature unit">
+        <button type="button" data-unit="metric" class="active">°C</button>
+        <button type="button" data-unit="imperial">°F</button>
+      </div>
+    </header>
+
+    <div id="recent" class="recent" aria-label="Recent searches"></div>
+
+    <section id="status" class="status" aria-live="polite" hidden></section>
+
+    <main id="dashboard" hidden>
+      <section class="hero card" aria-labelledby="cityName">
+        <div class="hero-main">
+          <p class="where"><span id="cityName"></span> <small id="localTime"></small></p>
+          <p class="temp" id="temp"></p>
+          <p class="desc" id="desc"></p>
+          <p class="feels" id="feels"></p>
+        </div>
+        <img id="heroIcon" class="hero-icon" alt="" width="160" height="160">
+      </section>
+
+      <section class="details" aria-label="Current conditions">
+        <div class="stat"><span>Humidity</span><b id="humidity"></b></div>
+        <div class="stat"><span>Wind</span><b id="wind"></b></div>
+        <div class="stat"><span>Pressure</span><b id="pressure"></b></div>
+        <div class="stat"><span>Visibility</span><b id="visibility"></b></div>
+        <div class="stat"><span>Sunrise</span><b id="sunrise"></b></div>
+        <div class="stat"><span>Sunset</span><b id="sunset"></b></div>
+      </section>
+
+      <section class="travel card" aria-labelledby="travelTitle">
+        <h2 id="travelTitle">Travel suggestions</h2>
+        <p id="verdict" class="verdict"></p>
+        <div class="travel-cols">
+          <div><h3>Good things to do</h3><ul id="activities"></ul></div>
+          <div><h3>Pack for it</h3><ul id="packing"></ul></div>
+        </div>
+      </section>
+
+      <section aria-labelledby="forecastTitle">
+        <h2 id="forecastTitle" class="section-title">Next 5 days</h2>
+        <div id="forecast" class="forecast"></div>
+      </section>
+    </main>
+
+    <footer class="foot">Data from <a href="https://openweathermap.org/" target="_blank" rel="noopener">OpenWeatherMap</a>. Milestone Project 2.</footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
